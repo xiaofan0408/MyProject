@@ -35,6 +35,7 @@
 /*.box img{*/
     /*width: 100%;*/
 /*}*/
+
 .navbar-brand{
     color: #000;
     font-size: 25px;
@@ -154,4 +155,7 @@
 .content{
     position: relative;
     left: 27%;
+}
+.main-content{
+    margin-top: 80px;
 }
