@@ -93,13 +93,16 @@ body{
 .pic-content{
     margin-top: 20px;
 }
+.works-wrap{
+    border-color: #ffffff;
+    margin-bottom: 10px;
+}
 .works-display{
     width: 610px;
     margin: 0 auto 20px;
     overflow: hidden;
     text-align: center;
     padding: 20px;
-    border-color: #ffffff;
 }
 .b-b{
     background: #ffffff;
