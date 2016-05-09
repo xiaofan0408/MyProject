@@ -1,0 +1,46 @@
+.com-box{
+    border: solid 6px #41403E;
+    background: transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: #41403E;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+.com-btn{
+    font-family: cursive;
+    font-size: 1.5rem;
+    width: 100px;
+    height: 40px;
+    border: solid 3px #41403E;
+    outline: none;
+    background: transparent;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+.com-btn:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+.com-btn:visited{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+.com-btn:active{
+    box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+}
+.com-text{
+    font-family: cursive;
+    border: solid 3px #41403E;
+    width: 200px;
+    height: 30px;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+input::-webkit-input-placeholder,input::-moz-placeholder,input:-ms-input-placeholder{
+     font-family: cursive;
+}

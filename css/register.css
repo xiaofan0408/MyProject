@@ -1,0 +1,76 @@
+.reg-form{
+    width: 70%;
+    margin:0 auto;
+}
+.form-title{
+    font-family: cursive;
+}
+.text-style{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.tip-text{
+    font-family: cursive;
+    display: inline-block;
+    width: 12%;
+    font-weight: bold;
+}
+.form-group{
+    margin: 0 auto;
+}
+.text-style{
+    height: 40px;
+}
+.loginbtn{
+    margin-top: 30px;
+    width: 50%;
+}
+.has-reg{
+    font-weight: bold;
+    display: block;
+    color: #f5683d;
+    font-size: 20px;
+    margin: 20px;
+}
+.has-reg:hover{
+    color: #f5683d;
+}
+@media (max-width: 480px) {
+     .reg-form{
+         width: 80%;
+     }
+    .tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .text-style{
+        width: 70%;
+    }
+    .loginbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .reg-form{
+        width: 80%;
+    }
+    .tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .text-style{
+        width: 70%;
+    }
+    .loginbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
