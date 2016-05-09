@@ -98,6 +98,8 @@ body{
     margin: 0 auto 20px;
     overflow: hidden;
     text-align: center;
+    padding: 20px;
+    border-color: #ffffff;
 }
 .b-b{
     background: #ffffff;
