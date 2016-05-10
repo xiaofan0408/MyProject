@@ -94,10 +94,11 @@ body{
     margin-top: 20px;
 }
 .works-wrap{
-    border-color: #ffffff;
+
     margin-bottom: 10px;
 }
 .works-display{
+    border-color: #ffffff;
     width: 610px;
     margin: 0 auto 20px;
     overflow: hidden;
@@ -173,4 +174,44 @@ ul.comm-list{
     color: #99a2aa;
     text-align: center;
     padding: 50px 0 50px 0;
+}
+
+@media (max-width: 480px) {
+    .reg-form{
+        width: 80%;
+    }
+    .tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .text-style{
+        width: 70%;
+    }
+    .loginbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .reg-form{
+        width: 80%;
+    }
+    .tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .text-style{
+        width: 70%;
+    }
+    .loginbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
 }
