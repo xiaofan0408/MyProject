@@ -1,27 +1,28 @@
 .reg-form{
     width: 70%;
     margin:0 auto;
+    margin-top:60px;
 }
-.form-title{
+.reg-form-title{
     font-family: cursive;
 }
-.text-style{
+.reg-text-style{
     width: 40%;
     margin-bottom: 10px;
 }
-.tip-text{
+.reg-tip-text{
     font-family: cursive;
     display: inline-block;
     width: 12%;
     font-weight: bold;
 }
-.form-group{
+.reg-group{
     margin: 0 auto;
 }
-.text-style{
+.reg-text-style{
     height: 40px;
 }
-.loginbtn{
+.signbtn{
     margin-top: 30px;
     width: 50%;
 }
@@ -39,14 +40,14 @@
      .reg-form{
          width: 80%;
      }
-    .tip-text{
+    .reg-tip-text{
         display: inline-block;
         width: 26%;
     }
-    .text-style{
+    .reg-text-style{
         width: 70%;
     }
-    .loginbtn{
+    .signbtn{
         width: 90%;
     }
 }
@@ -54,14 +55,14 @@
     .reg-form{
         width: 80%;
     }
-    .tip-text{
+    .reg-tip-text{
         display: inline-block;
         width: 26%;
     }
-    .text-style{
+    .reg-text-style{
         width: 70%;
     }
-    .loginbtn{
+    .signbtn{
         width: 90%;
     }
 }

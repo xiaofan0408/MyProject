@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+     <script src="js/angular.min.js"></script>
+    <style>
+        body{
+            background:#FFF;
+        }
+        .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+        .clearfloat{zoom:1}
+        body,
+        button, input, select, textarea {
+            font: 14px Helvetica, Arial, Microsoft YaHei;
+        }
+        .talk {
+            width: 430px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .photo {
+            float: left;
+        }
+        .content {
+            float: left;
+            position: relative;
+            left: 15px;
+        }
+        .name {
+            color: #aaa;
+        }
+        .send {
+            position:relative;
+            padding: 5px;
+            background:#F8C301;
+            border-radius:5px;
+            font-size: 16px;
+            color: #006dcc;
+            max-width: 315px;
+        }
+        .send .arrow {
+            position:absolute;
+            top:5px;
+            left:-16px;
+            width:0;
+            height:0;
+            font-size:0;
+            border:solid 8px;
+            border-color:#FFF #F8C301 #FFF #FFF;
+        }
+        input {
+            border: 1px #CCC solid;
+            border-radius: 5px;
+            width: 348px;
+            height: 35px;
+            text-indent: 9px;
+            line-height: 35px;
+        }
+        textarea {
+            width : 328px;
+            height: 157px;
+            border: 1px #CCC solid;
+            border-radius: 5px;
+            resize: none;
+            padding: 9px;
+        }
+        button {
+            width: 125px;
+            background-color: #1E93E1;
+            border-radius: 5px;
+            border: 0;
+            color: #FFF;
+            cursor: pointer;
+            margin-left: 265px;
+            height: 40px;
+            font-size: 20px;
+        }
+        .talk.ng-enter,
+        .talk.ng-leave,
+        .talk.ng-move {
+            transition: 1s ease-out all;
+        }
+
+
+        .talk.ng-enter {
+            left: -350px;
+            opacity: 0;
+        }
+
+        .talk.ng-enter.ng-enter-active {
+            left: 0;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HTML代码片段中请勿添加<body>标签 //-->
+<div id="container" ng-app="myApp" ng-controller="myCtrl">
+    <div>
+        <p><label for="name">名称：</label><input id="name" ng-model="name"/></p>
+        <p><label for="message" style="float: left">内容：</label><textarea id="message" ng-model="message"></textarea></p>
+        <p><button ng-click="add()">留言</button></p>
+    </div>
+
+    <div class="talk clearfloat" ng-repeat="data in list">
+        <div class="photo"><img width="50px" height="50px" src="https://ss1.baidu.com/70cFfyinKgQFm2e88IuM_a/forum/pic/item/0df431adcbef7609daac713928dda3cc7dd99ef5.jpg"></div>
+        <div class="content">
+            <div class="name">{{data.name}}</div>
+            <div class="send">
+                <div class="arrow"></div>
+                {{data.message}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 推荐开源CDN来选取需引用的外部JS //-->
+<!--<script src="//cdn.bootcss.com/angular.js/1.4.8/angular.js"></script>-->
+<script src="//cdn.bootcss.com/angular.js/1.4.8/angular-animate.js"></script>
+
+<script>
+        var myApp = angular.module("myApp", ["ngAnimate"]);
+        console.log(1);
+        myApp.controller("myCtrl", function($scope){
+            $scope.list = [];
+            console.log(2);
+            $scope.add = function(){
+                console.log(3);
+                $scope.list.push({name: $scope.name,message: $scope.message});
+                $scope.name = "";
+                $scope.message = "";
+            };
+        });
+        console.log(4);
+    </script>
+</body>
+
+</html>

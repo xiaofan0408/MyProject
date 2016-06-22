@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myapp">
 <head lang="zh">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -7,146 +7,82 @@
     <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="bootstrap3/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="css/comiccss.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/premain.css"/>
     <script src="js/jquery-2.2.2.min.js"></script>
     <script src="bootstrap3/js/bootstrap.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/angular.min.js"></script>
     <title>Index</title>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top ">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
+
+<nav class="navbar navbar-default navbar-fixed-top ">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right ">
+                <li ><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="register.html"><span class="glyphicon glyphicon-pencil"></span>Sign in</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid main-content">
+    <div class="row">
+        <div class="col-md-3 col-xs-4  loginform com-box">
+            <div class="logo" style="height: 100px;">
+
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right ">
-                    <li ><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login in</a></li>
-                    <li><a href=""><span class="glyphicon glyphicon-pencil"></span>Sign in</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
-     <div class="container-fluid main-content">
-         <div class="row">
-             <div class="col-md-3 col-xs-4  loginform com-box">
-                 <div class="logo" style="height: 100px;">
-
-                 </div>
-                 <div class="form-container">
-                     <div class="form-title text-center">
-                         <h1>Member Login</h1>
-                     </div>
-                     <div class="form-content">
-                         <form action="#">
-                             <div class="form-group">
-                                 <input type="text" class="com-text text-style" name="username"  placeholder="Username"/>
-                                 <input type="password" class="text-style com-text" name="password" placeholder="Password"/>
-                                 <button type="submit" class="com-btn loginbtn">LOGIN</button>
-                             </div>
-                         </form>
-                         <a href="#" class="text-center">Forgot Password?</a>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-md-9 col-xs-8 content ">
-                 <div class="container-fluid content-pic">
-                     <div class="masonry container-fluid content-pic">
-                         <div class="grid-sizer"></div>
-                         <div class="gutter-sizer"></div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg01.jpg"><img src="img1/thumbs/bg01.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg02.jpg"><img src="img1/thumbs/bg02.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg03.jpg"><img src="img1/thumbs/bg03.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg04.jpg"><img src="img1/thumbs/bg04.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg05.jpg"><img src="img1/thumbs/bg05.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg06.jpg"><img src="img1/thumbs/bg06.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg07.jpg"><img src="img1/thumbs/bg07.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg08.jpg"><img src="img1/thumbs/bg08.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg09.jpg"><img src="img1/thumbs/bg09.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg10.jpg"><img src="img1/thumbs/bg10.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg11.jpg"><img src="img1/thumbs/bg11.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg12.jpg"><img src="img1/thumbs/bg12.jpg"></a>
-                         </div>
-                         <div class="box img-responsive center-block">
-                             <a href="img1/bg13.jpg"><img src="img1/thumbs/bg13.jpg"></a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title text-center" id="myModalLabel">Member Login</h4>
+            <div class="form-container">
+                <div class="form-title text-center">
+                    <h1>Member Login</h1>
                 </div>
-                <div class="modal-body">
+                <div class="form-content">
                     <form action="#">
                         <div class="form-group">
-                            <input type="text" class="form-control text-style" name="username"  placeholder="Username"/>
-                            <input type="password" class="form-control text-style" name="password" placeholder="Password"/>
-                            <button type="submit" class="btn btn-primary btn-block ">LOGIN</button>
+                            <input type="text" class="com-text text-style" name="username"  placeholder="Username"/>
+                            <input type="password" class="text-style com-text" name="password" placeholder="Password"/>
+                            <button type="submit" class="com-btn loginbtn">LOGIN</button>
                         </div>
                     </form>
                     <a href="#" class="text-center">Forgot Password?</a>
                 </div>
             </div>
         </div>
+        <div class="col-md-9 col-xs-8 content ">
+            <div class="container-fluid content-pic" >
+                <div class="masonry container-fluid content-pic" ng-controller="imgController">
+                    <div class="grid-sizer"></div>
+                    <div class="gutter-sizer"></div>
+                    <div ng-repeat="img in imgs">
+                        <div class="box center-block">
+                            <a href="{{url}}{{img.realURL}}"><img src="{{url}}{{img.thumbURL}}" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="js/app.js"></script>
+</div>
+
+<script src="js/app.js"></script>
+
 </body>
 </html>

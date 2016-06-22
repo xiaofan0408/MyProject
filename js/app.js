@@ -2,32 +2,36 @@
  * Created by user-xiaofan on 2016/4/15.
  */
 'use strict';
+var $jq = $.noConflict();
+var app = angular.module('myapp',[]);
 
-$(document).ready(function(){
-    $(function() {
-        var $container = $('.masonry');
+app.controller('imgController',function ($scope) {
+    $scope.url = 'http://127.0.0.1:8080/MyProject/';
+    $scope.imgs=[];
+    $jq.ajax({
+        type:"GET",
+        url: "http://127.0.0.1:8080/MyProject/JsonTest",async:false,
+        dataType:"json",
+        success:function(data){
+            $scope.imgs = data;
+        }
+    });
+});
+
+$jq(document).ready(function(){
+    $jq(function() {
+        var $container = $jq('.masonry');
         $container.imagesLoaded(function() {
             $container.masonry({
-
                 columnWidth :'.grid-sizer',
                 gutter: '.gutter-sizer',
                 itemSelector: '.box',
-                isAnimated: true,
+                isAnimated: true
             });
         });
     });
 });
-//
-//$(document).ready(function(){
-//    $(".mygallery").chromaGallery
-//    ({
-//        color:'#000',
-//        gridMargin:15,
-//        maxColumns:5,
-//        dof:false,
-//        screenOpacity:0.8,
-//        onLoad: function () {
-//            alert("1111");
-//        }
-//    });
-//});
+app.controller('regController',function ($scope){
+
+
+});

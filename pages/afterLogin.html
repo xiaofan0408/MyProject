@@ -3,261 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="bootstrap3/css/bootstrap.min.css">
-    <style>
-
-        body{
-            background: #F1F1F1;
-        }
-        .rank-title{
-            word-break: break-all;
-            word-wrap: break-word;
-        }
-        .rank{
-            font-size: 46px;
-            font-weight: bold;
-            color:#c6c6c6;
-        }
-        .more-link{
-            padding: 0px;
-            margin: 0px;
-            height: 25px;
-            width: 100%;
-            background: #e5e9ef;
-            border:none;
-        }
-        .more-link a{
-            color: #000000;
-            text-decoration: none;
-        }
-        .more-link:hover{
-            background: rgb(204,208,213);
-        }
-        .more-link:visited{
-            background: rgb(204,208,213);
-        }
-        .more-link:active{
-            background: rgb(204,208,213);
-        }
-        .item-group{
-            margin: 0px;
-        }
-        .item-title{
-            background: #e5e9ef;
-            border-radius: 4px;
-            padding: 0px;
-            padding-left: 5px;
-            width: 100%;
-            font-size: 20px;
-            height: 26px;
-        }
-
-        .b-l{
-            width: 880px;
-            padding: 0px;
-            margin: 0px;
-        }
-        .b-l .b-head{
-            width: 99.5%;
-            height: 40px;
-            display: block;
-            white-space: nowrap;
-            position: relative;
-            margin-bottom: 5px;
-            background: #f2f4f6;
-            border: 3px solid #FFFFFF;
-        }
-        .b-head .b-head-t{
-            padding: 0 10px;
-            margin-right: 15px;;
-            float: left;
-            font-size: 25px;
-        }
-        .b-head .b-head-t a{
-            padding: 0px;
-            margin: 0px;;
-            line-height: 40px;
-            height: 40px;
-        }
-        .b-body-1 ._image-items {
-            padding: 0;
-            margin: 10px 0 0;
-            margin-left: 0px;
-            list-style: none;
-        }
-        .b-body-1 .image-item {
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            width: 200px;
-            height: 300px;
-            margin: 0 5px;
-            padding: 10px 10px 0;
-            font-size: 12px;
-            text-align: center;
-            line-height: 1;
-            vertical-align: top;
-            color: #555;
-        }
-
-        .image-item .v-work {
-            display: block;
-            margin-bottom: 7px;
-            height: 250px;
-        }
-        .v-work:hover{
-           border: 2px solid #00a1d6;
-        }
-        .image-item :visited {
-            color: #aaa;
-        }
-        .image-item a {
-            color: #555;
-        }
-        .v-work {
-            display: inline-block !important;
-            position: relative;
-            margin-bottom: 7px;
-        }
-
-        a {
-            color: #258fb8;
-            text-decoration: none;
-        }
-        .image-item .v-user {
-            font-size: 11px;
-            line-height: 17px;
-        }
-        ._layout-thumbnail {
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
-            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
-            cursor: pointer;
-        }
-        ._thumbnail {
-            line-height: 250px;
-            width: 100%;
-            padding: 0;
-            vertical-align: middle;
-            border: none;
-            position: relative;
-            z-index: -1;
-        }
-        .image-item .v-title {
-            line-height: 18px;
-            font-weight: bold;
-            font-size: 12px;
-            margin: 0;
-        }
-        .b-body-2 .v-list li{
-            display: inline-block;
-        }
-        .b-body-2 .v-list{
-            margin: 0px;
-            font-size: 0;
-            width: 100%;
-            height: 600px;
-            overflow: hidden;
-            padding: 0px;
-            list-style-type: none;
-        }
-        .b-body-2 .v-list li .v{
-            position: relative;
-            width: 437px;
-            height: 300px;
-            overflow: hidden;
-        }
-        .b-body-2 .v-list li .v .img-show {
-            width: 437px;
-            height: 300px;
-            display: block;
-            overflow: hidden;
-            text-align: center;
-        }
-        .b-body-2 .v-list li .v a img{
-            width: 100%;
-            height: 100%;
-            display: block;
-            margin: 0 auto;
-            outline: 0;
-        }
-
-        .b-body-3 .v-list{
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            padding: 0px;
-            list-style-type: none;
-        }
-        .b-body-3 .v-list li{
-            padding: 0 10px;
-            display: inline-block;
-            color: #555;
-        }
-        .b-body-3 .v-list li .v{
-            width: 270px;
-            height: 250px;
-            font-size: 12px;
-            overflow: hidden;
-        }
-        .b-body-3 .v-list li .v .img-show {
-            width: 270px;
-            height: 200px;
-            display: block;
-            overflow: hidden;
-            text-align: center;
-
-        }
-        .b-body-3 .v-list li .v a img{
-            width: 100%;
-            height: 100%;
-            display: block;
-            margin: 0 auto;
-            outline: 0;
-        }
-        .b-body-3 .v-list li .v a{
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .main-content{
-            margin-top: 70px;
-        }
-        .main-content .l-content{
-            background: #FFFFFF;
-            border-radius: 5px;
-            padding: 0;
-        }
-        .main-content a{
-            color: #000000;
-        }
-         .right-1 ,.right-2,.right-3{
-           margin-bottom: 30px;
-        }
-        .left-1,.left-2,.left-3{
-            margin-bottom: 50px;
-        }
-        .title-outside {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            vertical-align: middle;
-            background: rgba(0, 0, 0, 0.5);
-            height: 40px;
-            overflow: hidden;
-        }
-        .title-outside .title{
-            display: table-cell;
-            line-height: 40px;
-            padding: 0 30px;
-            vertical-align: middle;
-            font-weight: bold;
-            color: #ffffff;
-            font-size: 20px;
-        }
-    </style>
 </head>
 <body>
 <div class="container main-content">
@@ -272,47 +17,9 @@
                         </div>
                     </div>
                     <div class="b-body-1 ">
-                        <!--<ul class="v-list ">-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a class="img-show" href="main.html#/show"><img src="img1/thumbs/bg01.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test </div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a class="img-show" href=""><img src="img1/thumbs/bg02.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test</div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a class="img-show" href=""><img src="img1/thumbs/bg03.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test</div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a  class="img-show" href=""><img src="img1/thumbs/bg04.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test</div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a  class="img-show" href=""><img src="img1/thumbs/bg05.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test</div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<div class="v">-->
-                                    <!--<a  class="img-show" href=""><img src="img1/thumbs/bg06.jpg" alt=""/></a>-->
-                                    <!--<a href=""><div class="t">this is a test</div></a>-->
-                                <!--</div>-->
-                            <!--</li>-->
-                        <!--</ul>-->
                         <ul class="_image-items">
                             <li class="image-item">
-                                <a href="#" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg01.jpg" class="_thumbnail">
                                     </div>
@@ -323,7 +30,7 @@
                                 <a href="#" class="v-user" title="キサギ　トーヤ"  data-user_name="キサギ　トーヤ">キサギ　トーヤ</a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg02.jpg" class="_thumbnail">
                                     </div>
@@ -335,7 +42,7 @@
                                 </a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg03.jpg" class="_thumbnail">
                                     </div>
@@ -346,7 +53,7 @@
                                 <a href="" class="v-user " title="ぶりお" data-user_id="4983542" data-user_name="ぶりお">ぶりお</a>
                             </li>
                             <li class="image-item">
-                                <a href="#" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg01.jpg" class="_thumbnail">
                                     </div>
@@ -357,7 +64,7 @@
                                 <a href="#" class="v-user" title="キサギ　トーヤ"  data-user_name="キサギ　トーヤ">キサギ　トーヤ</a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg02.jpg" class="_thumbnail">
                                     </div>
@@ -369,7 +76,7 @@
                                 </a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg03.jpg" class="_thumbnail">
                                     </div>
@@ -380,7 +87,7 @@
                                 <a href="" class="v-user " title="ぶりお" data-user_id="4983542" data-user_name="ぶりお">ぶりお</a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg02.jpg" class="_thumbnail">
                                     </div>
@@ -392,7 +99,7 @@
                                 </a>
                             </li>
                             <li class="image-item">
-                                <a href="" class="v-work">
+                                <a href="#/show/1" class="v-work">
                                     <div class="_layout-thumbnail">
                                         <img src="img1/bg03.jpg" class="_thumbnail">
                                     </div>
@@ -418,7 +125,7 @@
                         <ul class="v-list ">
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href="">
+                                    <a class="img-show" href="#/show/1">
                                         <img src="img1/thumbs/bg01.jpg" alt=""/>
                                         <div class="title-outside"><div class="title">【清凉的彩色玻璃的世界】金鱼鱼缸特辑</div></div>
                                     </a>
@@ -426,7 +133,7 @@
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href="">
+                                    <a class="img-show" href="#/show/1">
                                         <img src="img1/thumbs/bg03.jpg" alt=""/>
                                         <div class="title-outside"><div class="title">【清凉的彩色玻璃的世界】金鱼鱼缸特辑</div></div>
                                     </a>
@@ -434,7 +141,7 @@
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href="">
+                                    <a class="img-show" href="#/show/1">
                                         <img src="img1/thumbs/bg02.jpg" alt=""/>
                                         <div class="title-outside"><div class="title">【清凉的彩色玻璃的世界】金鱼鱼缸特辑</div></div>
                                     </a>
@@ -442,7 +149,7 @@
                             </li>
                             <li>
                                 <div class="v">
-                                    <a  class="img-show" href="">
+                                    <a  class="img-show" href="#/show/1">
                                         <img src="img1/thumbs/bg04.jpg" alt=""/>
                                         <div class="title-outside"><div class="title">【清凉的彩色玻璃的世界】金鱼鱼缸特辑</div></div>
                                     </a>
@@ -464,56 +171,56 @@
                         <ul class="v-list ">
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a  class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a  class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a  class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a  class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a  class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a  class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
                             </li>
                             <li>
                                 <div class="v">
-                                    <a class="img-show" href=""><img src="img1/thumbs/bg01.jpg" alt=""/></a>
+                                    <a class="img-show" href="#/show/1"><img src="img1/thumbs/bg01.jpg" alt=""/></a>
                                     <a href=""><div class="t text-center">this is a test</div></a>
                                     <a href="" class="v-user text-center" >Test</a>
                                 </div>
@@ -724,7 +431,7 @@
                     <a href="">查看更多</a>
 
                 </div>
-        </div>
+            </div>
         </div>
     </div>
 </div>
