@@ -25,19 +25,19 @@ spring cloud基于spring boot，是构建分布式系统的工具集
 访问权限进行验证，除了/health和/info端点能访问，其他的大多数会出现401，可以通过
 以下几个方式解决：
 
-    1.将management.security.enabled设置为false来关闭验证
-    2.开启Http验证来获取权限
-    3.设置ContextPath
+    1. 将management.security.enabled设置为false来关闭验证
+    2. 开启Http验证来获取权限
+    3. 设置ContextPath
 
 ##### 2. Ribbon组件
 
 *   SpringCloud实现客户负载均衡的组件，使用@LoadBalanced修饰过的RestTemplate实现对服务的访问
 使用的负载均衡策略有
 
-    1.RandomRule随机策略
-    2.RoundRobinRule线性轮询策略
-    3.RetryRule重试策略
-    4.根据权重
+    1. RandomRule随机策略
+    2. RoundRobinRule线性轮询策略
+    3. RetryRule重试策略
+    4. 根据权重
 	
 ##### 3.Hystrix组件
 
@@ -70,9 +70,9 @@ spring cloud基于spring boot，是构建分布式系统的工具集
      ###### 过滤器中处理异常
      
      在过滤器中象平常java代码中里抛出异常是无法被接收的，想要在过滤器中处理异常有异常有以下两种方法
-     1.获取RequestContext，然后在try-catch代码中处理异常，在发生异常后在catch块中，调用RequestContext的
+     1. 获取RequestContext，然后在try-catch代码中处理异常，在发生异常后在catch块中，调用RequestContext的
      set方法，设置error.status_code和error.exception的值，之后异常就可以被zuul内置的SendErrorFilter过滤器处理
-     2.自定义error类型的过滤器就可以处理异常。
+     2. 自定义error类型的过滤器就可以处理异常。
  
  ##### 6.Config组件
  
