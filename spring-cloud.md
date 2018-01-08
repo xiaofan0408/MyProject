@@ -44,7 +44,7 @@ spring cloud基于spring boot，是构建分布式系统的工具集
 *    断路器组件用来为服务提供容错性的，在一个服务出现错误或无法请求的时候能够迅速断开而不会去请求下一个服务或者等待，在服务恢复的时候也能够还原连接。
  在pom.xml处加上以后依赖，在启动文件处加上@EnableCircuitBreaker开启断路器。
 
-#####4.Feign组件
+##### 4.Feign组件
 
 *    一个声明式的服务调用组件，功能上相当于Ribbon组件和Hystrix组件的集合，使用Ribbon组件实现客户端的负载均衡,需要配置
  feign.hystrix.enabled=true  这个配置来开启hystrix
