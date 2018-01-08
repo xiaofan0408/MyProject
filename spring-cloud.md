@@ -75,4 +75,14 @@ spring cloud基于spring boot，是构建分布式系统的工具集
      2. 自定义error类型的过滤器就可以处理异常。
  
  ##### 6.Config组件
- 
+ *    Config组件用来配置一个外部的配置中心，用来统一配置的管理。一般来说一个配置中心可分为Config服务端和Config客户端，
+ 其中Config服务端用来配置外部配置，而Config客户端用来调用config服务端。
+        *    Config服务端
+        编写一个Config服务端首先要在pom.xml中添加Config的依赖，然后在启动类添加@EnableConfigServer的注解，再之后就需要在
+        application.yml或者application.properties中添加外部配置的地址，外部配置可以是以下几个：
+             1. GIT仓库
+             2. SVN仓库
+             3. 本地仓库
+        
+        就这样可以启动一个Config服务端。
+        *    Config客户端
