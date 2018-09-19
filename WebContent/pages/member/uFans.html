@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="fans-wrapper clearfix">
+    <div class="col-full">
+        <div class="tabs clearfix">
+            <a ui-sref="member.follow" data-page="follow" class="">0 关注</a>
+            <a ui-sref="member.fans" data-page="fans" class="active">0 粉丝</a>
+        </div>
+        <div id="fans-list" class="section fans" ng-class="{'empty':isEmpty}>
+            <div class="content" ng-repeat="fan in fans">
+                 <div class="list-item clearfix" >
+                    <a href="#/member/{{fan.id}}/index"  class="cover" >
+                        <img src={{fan.userImg}}>
+                    </a>
+                    <div class="content">
+                        <a href="#/member/{{fan.id}}/index"  class="title" >{{fan.userName}}</a>
+                        <div class="desc">{{fan.remark}}</div>
+                        <div class="action">
+                       <!--  
+                            <a href="javascript: void(0);" class="follow" ><span class="icon"></span>关注</a>
+                            <a href="javascript: void(0);" class="unfollow active" >已关注</a>
+                         --> 
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="pager" id="fans-list-pager"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

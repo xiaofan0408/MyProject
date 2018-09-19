@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="my-body" ng-controller="showController">
+<div class="my-container">
+    <div class="container-fluid">
+        <header class="my-header">
+            <div class="row">
+                <div class="col-md-4 col-xs-4">
+                    <img src="{{jsondata[1].userImg}}" alt="" class="img-circle"/>
+                </div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="u-title ">
+                        <div class="u-name">
+                            <span>{{jsondata[1].userName}}</span>
+                        </div>
+                        <div class="u-has">
+                            <span class="btn ">正在关注</span>
+                        </div>
+                        <button class="btn morebtn"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                    </div>
+                    <div class="u-content">
+                        <span>{{jsondata[1].remark}}</span>
+                    </div>
+                    <div class="u-att">
+                        <span>已发作品 <a ui-sref="member({user_id:jsondata[0].id,method:'illust'})">{{jsondata[1].sumOfillust}}</a></span>
+                        <span><a ui-sref="member({user_id:jsondata[0].id,method:'fans'})">{{jsondata[1].beconcerned}}</a>人关注</span>
+                        <span>正在关注 <a ui-sref="member({user_id:jsondata[0].id,method:'follow'})">{{jsondata[1].sumOffollow}}</a></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="pic-content">
+        <div class="works-display com-box">
+            <a href="{{jsondata[0].realRUL}}"><img src="{{jsondata[0].realRUL}}"  alt=""/></a>
+        </div>
+        <div class="b-b">
+            <div class="s_tag">
+                <ul class="tag-list data-initialized">
+                    <li  class="unverified" ng-repeat="tag in tags">
+                        <a class="tag-val" ui-sref="search({keyword:tag})" >{{tag}}</a>
+                    </li>
+                </ul>
+                <span id="newtag"><a class="b-btn w edit-tag" ng-click="addtag()">添加</a></span>
+                <div class="input" ng-show="flag" >
+                     <input type="text" ng-model="tag_input">
+                </div>
+            </div>
+            <div class="instro">
+                <div id="desc">
+                    {{jsondata[0].remark}}
+                </div>
+            </div>
+            <div class="my-comment">
+                <div class="img-comment">
+                    <a href="img1/bg01.jpg"><img src="img1/bg01.jpg" class="img-circle" alt=""/></a>
+                </div>
+                <div class="comment-content">
+                    <textarea  class="textarea1"  ng-model="CommContent"></textarea>
+                    <button class="btn" ng-click="addComment()">发表评论</button>
+                </div>
+                <div class="comm-list">
+                    <div class="no-more" ng-show="!hascomment">
+                        没有更多信息
+                    </div>
+                    <ul class="my-comm_list">
+                        <li id="l_id_110612428" class="main-floor" ng-repeat="mycomment in commentList">
+                            <div class="facebox">
+                                <a ui-sref="member({user_id:mycomment['comment'].userid})" >
+                                    <img src="{{mycomment['user'].UserImg}}" class="face">
+                                </a>
+                                <a ui-sref="member({user_id:mycomment['comment'].userid,method:'index'})"  class="face_bg" card="Dive夏"></a>
+                            </div>
+                            <div class="t">
+                                <a  ui-sref="member({user_id:mycomment['comment'].userid,method:'index'})">{{mycomment['user'].userName}}</a>
+                                <a href="http://www.bilibili.com/html/help.html#k_3"  class="user-info-level l4"></a>
+                            </div>
+                            <div class="content">{{mycomment['comment'].content}}</div>
+                            <div class="elinfo">
+                                <span class="floor-num">#{{hascomment-$index}}</span>
+                                <!--<span class="floor-date">0秒前</span>-->
+                              </div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

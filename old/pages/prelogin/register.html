@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+        <div class="reg-wrap container" ng-controller="regController">
+            <div class="reg-form com-box" >
+                <div class="logo" style="height: 100px;">
+
+                </div>
+                <div class="form-container ">
+                    <div class="reg-form-title text-center">
+                        <h1>Member Register</h1>
+                    </div>
+                    <div class="form-content text-center">
+                        <form class="register-form" action="http://127.0.0.1:8080/MyProject/api/register" method="post">
+                            <div class="form-group text-center reg-group">
+                                <div class="reg-tip-text">用户名：</div>
+                                <input type="text" class="com-text reg-text-style" name="username"  placeholder="Username" ng-model="username"/>
+                            </div>
+                            <div class="form-group text-center  reg-group">
+                                <div class="reg-tip-text">密码：</div>
+                                <input type="password" class="reg-text-style com-text"  placeholder="Password" ng-model="password" ng-change="cypto()"/>
+                                <input type="hidden" name="txt_password" value={{txt_password}}>
+                            </div>
+                            <div class="form-group text-center  reg-group">
+                                <div class="reg-tip-text">再输一次：</div>
+                                <input type="password" class="reg-text-style com-text" placeholder="Password"/>
+                            </div>
+                            <div class="form-group text-center  reg-group">
+                                <div class="reg-tip-text">邮箱：</div>
+                                <input type="email" class="reg-text-style com-text" name="Email" placeholder="Email" ng-model="Email"/>
+                            </div>
+                            <div class="form-group text-center  reg-group">
+                                <button type="submit" class="com-btn signbtn">SIGN IN</button>
+                            </div>
+                        </form>
+                        <a ui-sref="index" class="has-reg ">已经注册了</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

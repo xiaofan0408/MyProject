@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <div class="container">
+           <div class="h-wrapper">
+                   <ul class="_image-items">
+                       <li class="image-item" ng-repeat="item in items">
+                           <a href="#/show/{{item.id}}" class="v-work">
+                               <div class="_layout-thumbnail">
+                                   <img src="{{item.thumbURL}}" class="_thumbnail">
+                               </div>
+                           </a>
+                           <a href="#/show/{{item.id}}">
+                               <h1 class="v-title " >{{item.title}}</h1>
+                           </a>
+                       </li>
+                   </ul>
+
+               <nav class="my-pager">
+
+                   <ul class="pager">
+                       <li><a href="javascript:;" ng-click="getpre()">Previous</a></li>
+                       <li><a href="javascript:;" ng-click="getnext()">Next</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </div>
+</body>
+</html>

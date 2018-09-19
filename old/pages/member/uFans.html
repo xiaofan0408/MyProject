@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="fans-wrapper clearfix">
+    <div class="col-full">
+        <div class="tabs clearfix">
+            <a ui-sref="member.follow" data-page="follow" class="">62 关注</a>
+            <a ui-sref="member.fans" data-page="fans" class="active">0 粉丝</a>
+        </div>
+        <div id="fans-list" class="section fans empty" data-api="/ajax/friend/GetFansList" data-params="{&quot;mid&quot;: 7449228, &quot;page&quot;: 1}" data-max="20">
+            <div class="content">
+
+            </div>
+            <div class="pager" id="fans-list-pager"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container main-content">
+    <div class="row item-col">
+        <div class="col-md-9 l-content">
+            <div class="left-1">
+                <div class="b-l">
+                    <div class="b-head">
+                        <span class="b-head-i"></span>
+                        <div class="b-head-t">
+                            <a href="">我的关注</a>
+                        </div>
+                    </div>
+                    <div class="b-body-1 ">
+                        <div class="al-empty" style="text-align: center;">
+                            <span class="tip">没有关注的人</span>
+                        </div>
+                        <ul class="_image-items">
+                            <li class="image-item" ng-repeat="item in Myitems">
+                                <a ui-sref="#/show/{{item.illust.id}}" class="v-work">
+                                    <div class="_layout-thumbnail">
+                                        <img src="{{item.illust.thumbURL}}" class="_thumbnail">
+                                    </div>
+                                </a>
+                                <a ui-sref="#/show/{{item.illust.id}}">
+                                    <h1 class="v-title " title="{{item.illust.title}}">{{item.illust.title}}</h1>
+                                </a>
+                                <a ui-sref="#/member/{{item.user.id}}/index" class="v-user" >{{item.user.userName}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-2">
+                <div class="b-l">
+                    <div class="b-head">
+                        <span class="b-head-i"></span>
+                        <div class="b-head-t">
+                            <a href="">热门</a>
+                        </div>
+                    </div>
+                    <div class="b-body-2">
+                        <ul class="v-list ">
+                            <li ng-repeat="hot in hots">
+                                <div class="v">
+                                    <a class="img-show" ui-sref="#/show/{{hot.id}}">
+                                        <img src="{{hot.thumbURL}}" alt=""/>
+                                        <div class="title-outside"><div class="title">{{hot.title}}</div></div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-3">
+                <div class="b-l">
+                    <div class="b-head">
+                        <span class="b-head-i"></span>
+                        <div class="b-head-t">
+                            <a href="">热门作者</a>
+                        </div>
+                    </div>
+                    <div class="b-body-3">
+                        <ul class="v-list ">
+                            <li ng-repeat="huser in HotUser">
+                                <div class="v">
+                                    <a class="img-show" ui-sref="#/member/{{huser.id}}/index"><img src="{{huser.UserImg}}" alt=""/></a>
+                                    <a ui-sref="#/member/{{huser.id}}/index"><div class="t text-center">{{huser.userName}}</div></a>
+                                    <!--<a href="" class="v-user text-center" >Test</a>-->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 r-content">
+            <div class="right-1">
+                <div class="item-title list-group-item">
+                    每日排行
+                </div>
+                <div class="rank-body">
+                    <ul class="item-group list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">1</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">2</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">3</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more-link btn text-center">
+                    <a href="">查看更多</a>
+
+                </div>
+            </div>
+            <div class="right-2">
+                <div class="item-title list-group-item">
+                    新人排行
+                </div>
+                <div class="rank-body">
+                    <ul class="item-group list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">1</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">2</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">3</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more-link btn text-center">
+                    <a href="">查看更多</a>
+
+                </div>
+            </div>
+            <div class="right-3">
+                <div class="item-title list-group-item">
+                    历史排行
+                </div>
+                <div class="rank-body">
+                    <ul class="item-group list-group">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">1</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">2</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href=""><img class="img-item"src="img1/thumbs/bg01.jpg" alt="" style="width: 100px;height: 100px;"/></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="">
+                                        <div class="rank-title">
+                                            This is a Test
+                                        </div>
+                                    </a>
+                                    <div class="rank-author">
+                                        By:<a href="">xxxxxx</a>
+                                    </div>
+                                    <div class="rank text-right">3</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more-link btn text-center">
+                    <a href="">查看更多</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

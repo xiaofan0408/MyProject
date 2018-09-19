@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="collect-wrapper clearfix">
+
+    <div class="collect-heading">
+        <div class="collect-heading-l">
+            <h3 class="section-title" style="padding: 5px;">
+                收藏作品
+            </h3>
+        </div>
+        <div class="collect-heading-r">
+
+        </div>
+    </div>
+    <div class="illust-content" ng-class="{'empty':isEmpty}">
+         <div class="b-body-3">
+               <ul class="v-list ">
+                   <li ng-repeat="collect in collects">
+                         <div class="v">
+                             <a class="img-show" href="#/show/{{collect.illust.id}}"><img src="{{collect.illust.thumbURL}}" alt=""/></a>
+                               <a href="#/show/{{collect.illust.id}}">
+                               <div class="t text-center">{{collect.illust.title}}</div>
+                             </a>    
+                         </div>
+                     </li>
+                </ul>
+           </div>
+       </div>
+    
+    <div class="collect-pager">
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+body{
+    background: #F1F1F1;
+}
+.text-style{
+    width: 70%;
+    box-sizing:content-box;
+    display: block;
+    height: 35px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    font-size: 2rem;
+}
+.loginbtn{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+.modal-body a,.form-container a{
+    display: block;
+    color: #f5683d;
+    font-size: 20px;
+    margin: 20px;
+}
+.form-container .form-title{
+    font-size: 30px;
+    margin-bottom:20px ;
+}
+.navbar-brand{
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+    overflow: hidden;
+
+}
+.navbar-brand img{
+    height: 70px;
+}
+.navbar{
+    background: white ;
+    box-shadow: rgba(0,0,0,0.1) 0 1px 2px;
+}
+.logo{
+    overflow: hidden;
+    position: relative;
+}
+.logo img{
+    position: absolute;
+    height: 200px;
+    top: -30px;
+    right: 41px;
+}
+.box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.content-pic{
+    padding: 0px;
+    margin: 0px;
+}
+.loginform{
+    position: fixed;
+    border-color: #FFFFFF;
+    background: #fafafa;
+}
+.content{
+    position: relative;
+    left: 26%;
+}
+.main-content{
+    margin-top: 80px;
+}
+.reg-form{
+    width: 70%;
+    margin:0 auto;
+    margin-top:60px;
+    border-color: #FFFFFF;
+    background: #f8f8f8;
+}
+.reg-form-title{
+    font-family: cursive;
+}
+.reg-text-style{
+    width: 40%;
+    margin-bottom: 10px;
+}
+.reg-tip-text{
+    font-family: cursive;
+    display: inline-block;
+    width: 12%;
+    font-weight: bold;
+}
+.reg-group{
+    margin: 0 auto;
+}
+.reg-text-style{
+    height: 40px;
+}
+.signbtn{
+    margin-top: 30px;
+    width: 50%;
+}
+.has-reg{
+    font-weight: bold;
+    display: block;
+    color: #f5683d;
+    font-size: 20px;
+    margin: 20px;
+}
+.has-reg:hover{
+    color: #f5683d;
+}
+
+@media (max-width: 480px) {
+    .masonry {
+        margin: 3% 0;
+    }
+    .masonry .grid-sizer {
+        width:100%;
+    }
+    .masonry .gutter-sizer {
+        width: 3%;
+    }
+    .masonry .box {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+    .masonry .box img {
+        width: 100%;
+    }
+    .loginform{
+        display: none;
+    }
+    .content{
+        width: 90%;
+        left: 5%;
+    }
+    .reg-form{
+        width: 80%;
+    }
+    .reg-tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .reg-text-style{
+        width: 70%;
+    }
+    .signbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .masonry {
+        margin: 1% 0;
+    }
+    .masonry .grid-sizer {
+        width: 100%;
+    }
+    .masonry .gutter-sizer {
+        width: 1%;
+    }
+    .masonry .box {
+        width: 100%;
+        margin-bottom: 1%;
+    }
+    .masonry .box img {
+        width: 100%;
+    }
+    .loginform{
+        display: none;
+    }
+    .content{
+        width: 90%;
+        left: 5%;
+    }
+    .reg-form{
+        width: 80%;
+    }
+    .reg-tip-text{
+        display: inline-block;
+        width: 26%;
+    }
+    .reg-text-style{
+        width: 70%;
+    }
+    .signbtn{
+        width: 90%;
+    }
+}
+@media (min-width: 768px) {
+    .masonry {
+        margin: 1% 0;
+    }
+    .masonry .grid-sizer {
+        width:45%;
+    }
+    .masonry .gutter-sizer {
+        width: 1%;
+    }
+    .masonry .box {
+        width: 45%;
+        margin-bottom: 1%;
+    }
+    .masonry .box img {
+        width: 100%;
+    }
+    .content{
+        left: 35%;
+    }
+}
+@media (min-width: 992px) {
+    .masonry {
+        margin: 1.875% 0;
+    }
+    .masonry .grid-sizer {
+        width: 30.333%;
+    }
+    .masonry .gutter-sizer {
+        width: 1.875%;
+    }
+    .masonry .box {
+        width: 30.333%;
+        margin-bottom: 1.875%;
+    }
+    .masonry .box img {
+        width: 100%;
+    }
+    .content{
+        left: 27%;
+    }
+}
+@media (min-width: 1200px) {
+    .masonry {
+        margin: 1% 0;
+    }
+    .masonry .grid-sizer {
+        width: 23.5%;
+    }
+    .masonry .gutter-sizer {
+        width: 1%;
+    }
+    .masonry .box {
+        width: 23.5%;
+        margin-bottom: 1%;
+    }
+    .masonry .box img {
+        width: 100%;
+    }
+    .content{
+        left: 27%;
+    }
+}

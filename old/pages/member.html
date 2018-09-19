@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <div class="mem-body" ng-controller="memController">
+         <div class="mem-container">
+         <div class="container-fluid">
+             <header class="mem-header">
+                 <div class="row">
+                     <div class="col-md-4 col-xs-4">
+                         <img src="img2/10.jpg" alt="" class="img-circle"/>
+                     </div>
+                     <div class="col-md-8 col-xs-8">
+                         <div class="mem-title ">
+                             <div class="mem-name">
+                                 <span>一脸懵逼</span>
+                             </div>
+                             <div class="mem-has">
+                                 <span class="btn ">编辑资料</span>
+                             </div>
+                             <button class="btn morebtn"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                         </div>
+                         <div class="mem-content">
+                             <span>一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼 一脸懵逼</span>
+                         </div>
+                         <div class="mem-att">
+                             <span>已发作品<a ui-sref="member.illust">xx</a></span>
+                             <span><a ui-sref="member.fans">xx</a>人关注</span>
+                             <span>正在关注<a ui-sref="member.follow">xx</a></span>
+                         </div>
+                     </div>
+                 </div>
+             </header>
+         </div>
+
+             <div class="n">
+                 <div class="wrapper">
+                     <div class="n-left">
+                         <a ui-sref="member.index" ng-click="pagechange({'left': '16px','width': '84px','height': '3px'})" class="n-btn n-index active"
+                            ng-mouseover="nCursor={'left': '16px','width': '84px','height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor">主页</a>
+                         <a ui-sref="member.illust"  ng-click="pagechange({'left': '129px','width': '84px', 'height': '3px'})" class="n-btn n-illust"
+                            ng-mouseover="nCursor={'left': '129px','width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor">作品</a>
+                         <a ui-sref="member.collect" ng-click="pagechange({'left': '242px','width': '84px','height': '3px'})" class="n-btn n-bangumi n-subs"
+                            ng-mouseover="nCursor={'left': '242px', 'width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor">收藏</a>
+                         <a ui-sref="update" ng-click="pagechange({'left': '365px', 'width': '84px', 'height': '3px'})" class="n-btn n-fav n-favlist n-host"
+                            ng-mouseover="nCursor={'left': '365px', 'width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor">投稿</a>
+                     </div>
+                     <div class="n-cursor" ng-style="nCursor"></div>
+                 </div>
+             </div>
+             <div class="n-body">
+                 <div ui-view></div>
+             </div>
+         </div>
+     </div>
+</body>
+</html>

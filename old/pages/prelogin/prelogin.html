@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container-fluid main-content"  ng-controller="imgController">
+    <div class="row">
+        <div class="col-md-3 col-xs-4  loginform com-box">
+            <div class="logo" style="height: 100px;">
+                <img src="img2/logo.png" alt="">
+            </div>
+            <div class="form-container">
+                <div class="form-title text-center">
+                    <h1>Member Login</h1>
+                </div>
+                <div class="form-content">
+                    <form action="http://127.0.0.1:8080/MyProject/api/login" method="post">
+                        <div class="form-group">
+                            <input type="text" class="com-text text-style" name="username"  placeholder="Username"/>
+                            <input type="password" class="text-style com-text"  placeholder="Password" ng-model="password" ng-change="cypto()"/>
+                            <input type="hidden" name="password" value={{txt_password}}>
+                            <button type="submit" class="com-btn loginbtn">LOGIN</button>
+                        </div>
+                    </form>
+                    <a href="#" class="text-center">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-xs-8 content ">
+            <div class="container-fluid content-pic" >
+                <div class="masonry container-fluid content-pic">
+                    <div class="grid-sizer"></div>
+                    <div class="gutter-sizer"></div>
+                    <div ng-repeat="img in imgs">
+                        <div class="box center-block" data-realUrl="{{url}}{{img.realURL}}">
+                            <a href="/test3/main.html#/show/{{img.id}}"><img src="{{url}}{{img.thumbURL}}" alt="{{img.title}}"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <div class="mem-body" ng-controller="memController">
+         <div class="mem-container">
+         <div class="container-fluid">
+             <header class="mem-header">
+                 <div class="row">
+                     <div class="col-md-4 col-xs-4">
+                         <img src="{{users.userImg}}" alt="" class="img-circle"/>
+                     </div>
+                     <div class="col-md-8 col-xs-8">
+                         <div class="mem-title ">
+                             <div class="mem-name">
+                                 <span>{{users.userName}}</span>
+                             </div>
+                             <div class="mem-has">
+                                 <span class="btn" ng-class="{'my-ismy':!ismy}">编辑资料</span>
+                                 <span class="btn" ng-class="{'my-follow':!isfollow}" ng-click="unfollow()">已关注</span>
+                                 <span class="btn" ng-class="{'my-follow':!(!ismy&&!isfollow)}" ng-click="follow()" >未关注</span>
+                             </div>
+                             <button class="btn morebtn"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                         </div>
+                         <div class="mem-content">
+                             <span>{{users.remark}}</span>
+                         </div>
+                         <div class="mem-att">
+                             <span>已发作品<a ui-sref="member.illust">{{users.sumOfillust}}</a></span>
+                             <span><a ui-sref="member.fans">{{users.beconcerned}}</a>人关注</span>
+                             <span>正在关注<a ui-sref="member.follow">{{users.sumOffollow}}</a></span>
+                         </div>
+                     </div>
+                 </div>
+             </header>
+         </div>
+
+             <div class="n">
+                 <div class="wrapper">
+                     <div class="n-left">
+                         <a ui-sref="member.index" ng-click="pagechange({'left': '16px','width': '84px','height': '3px'})" class="n-btn n-index active"
+                            ng-mouseover="nCursor={'left': '16px','width': '84px','height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor"><img src="img2/主页.png" style="height: 20px;">主页</a>
+                         <a ui-sref="member.illust"  ng-click="pagechange({'left': '150px','width': '84px', 'height': '3px'})" class="n-btn n-illust"
+                            ng-mouseover="nCursor={'left': '150px','width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor"><img src="img2/作品.png" style="height: 20px;">作品</a>
+                         <a ui-sref="member.collect" ng-click="pagechange({'left': '290px','width': '84px','height': '3px'})" class="n-btn n-bangumi n-subs"
+                            ng-mouseover="nCursor={'left': '290px', 'width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor"><img src="img2/收藏.png" style="height: 20px;">收藏</a>
+                         <a ui-sref="update" ng-click="pagechange({'left': '440px', 'width': '84px', 'height': '3px'})" class="n-btn n-fav n-favlist n-host"
+                            ng-mouseover="nCursor={'left': '440px', 'width': '84px', 'height': '3px'}"
+                            ng-mouseleave="nCursor=tempCursor"><img src="img2/投稿.png" style="height: 20px;">投稿</a>
+                     </div>
+                     <div class="n-cursor" ng-style="nCursor"></div>
+                 </div>
+             </div>
+             <div class="n-body">
+                 <div ui-view></div>
+             </div>
+         </div>
+     </div>
+</body>
+</html>

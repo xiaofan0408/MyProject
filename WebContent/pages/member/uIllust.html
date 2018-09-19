@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="illust-wrapper clearfix">
+
+       <div class="illust-heading">
+           <div class="illust-heading-l">
+               <h3 class="section-title" style="padding: 5px;">
+                                                                      作品                 
+               </h3>
+           </div>
+           <div class="illust-heading-r">
+
+           </div>
+       </div>
+       <div class="illust-content" ng-class="{'empty':isEmpty}">
+         <div class="b-body-3">
+               <ul class="v-list ">
+                   <li ng-repeat="illust in illusts">
+                         <div class="v">
+                             <a class="img-show" href="#/show/{{illust.id}}"><img src="{{illust.thumbURL}}" alt=""/></a>
+                               <a href="#/show/{{illust.id}}">
+                               <div class="t text-center">{{illust.title}}</div>
+                             </a>    
+                         </div>
+                     </li>
+                </ul>
+           </div>
+       </div>
+       <div class="illust-pager">
+
+       </div>
+
+</div>
+
+</body>
+</html>
