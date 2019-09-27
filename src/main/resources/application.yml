@@ -4,5 +4,18 @@ spring:
       host: 118.25.217.97
       port: 27017
       database: picmana
+      username: xiaofan
+      password: rootroot
 server:
   port: 8787
+
+fdfs:
+  so-timeout: 1501
+  connect-timeout: 601
+  thumb-image:
+    height: 80
+    width: 80
+  tracker-list: 118.25.217.97:22122
+
+fdfs-image-base-url: 118.25.217.97:8888
+

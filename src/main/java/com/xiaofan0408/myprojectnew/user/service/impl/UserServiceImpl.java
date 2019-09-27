@@ -1,5 +1,6 @@
 package com.xiaofan0408.myprojectnew.user.service.impl;
 
+import com.xiaofan0408.myprojectnew.common.core.BaseService;
 import com.xiaofan0408.myprojectnew.common.snowflake.SnowflakeFactory;
 import com.xiaofan0408.myprojectnew.user.bean.entity.User;
 import com.xiaofan0408.myprojectnew.user.dao.UserRepository;
@@ -13,7 +14,7 @@ import reactor.core.publisher.Mono;
  * @author xuzefan  2019/9/23 14:01
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl extends BaseService implements UserService{
 
     @Autowired
     private UserRepository userRepository;
@@ -25,7 +26,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Mono<User> insert(User user) {
-        user.setId(SnowflakeFactory.getSnowflakeIdWorker().nextId());
+        user.setId(generateKey());
         return userRepository.insert(user);
     }
 
