@@ -1,7 +1,8 @@
 package com.xiaofan0408.myprojectnew.common.util;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.function.Consumer;
 
 import org.apache.commons.io.FilenameUtils;
@@ -41,19 +42,18 @@ public class FastDFSClient {
        return Mono.create(new Consumer<MonoSink<String>>() {
            @Override
            public void accept(MonoSink<String> stringMonoSink) {
-               file.content().subscribe(new Consumer<DataBuffer>() {
-                   @Override
-                   public void accept(DataBuffer dataBuffer) {
-                       try {
-                           StorePath storePath = storageClient.uploadFile(dataBuffer.asInputStream(), dataBuffer.readableByteCount(),
-                                   FilenameUtils.getExtension(file.filename()), null);
-                           stringMonoSink.success(getResAccessUrl(storePath));
-                       } catch (Exception e) {
-                           stringMonoSink.error(e);
-                       }
-                   }
-               });
-
+               try {
+                   Path tempPath = Files.createTempFile("tmp", file.filename());
+                   File tempFile = tempPath.toFile();
+                   file.transferTo(tempFile);
+                   FileInputStream fileInputStream = new FileInputStream(tempFile);
+                   StorePath storePath = storageClient.uploadFile(fileInputStream, tempFile.length(),
+                           FilenameUtils.getExtension(file.filename()), null);
+                   stringMonoSink.success(getResAccessUrl(storePath));
+                   Files.delete(tempPath);
+               } catch (Exception e) {
+                   stringMonoSink.error(e);
+               }
            }
        }).publishOn(Schedulers.elastic());
     }
