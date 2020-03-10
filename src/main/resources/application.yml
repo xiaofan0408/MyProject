@@ -1,11 +1,3 @@
-spring:
-  data:
-    mongodb:
-      host: 118.25.217.97
-      port: 27017
-      database: picmana
-      username: xiaofan
-      password: rootroot
 server:
   port: 8787
 
